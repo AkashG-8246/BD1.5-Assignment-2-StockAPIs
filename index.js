@@ -46,7 +46,7 @@ app.get('/calculate-return-percentage', (req, res) => {
 });
 
 function calculateReturnsPercentage(boughtPrice, returns) {
-  return ((marketPrice - boughtPrice) / boughtPrice) * 100;
+  return (returns / boughtPrice) * 100;
 }
 
 // API Call: <http://localhost:3000/total-return-percentage?stock1=10&stock2=20&stock3=20&stock4=40>
