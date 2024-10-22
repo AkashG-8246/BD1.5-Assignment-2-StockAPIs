@@ -68,14 +68,14 @@ function totalReturnsercentage(stock1, stock2, stock3, stock4) {
 // API Call: <http://localhost:3000/status?returnPercentage=90>
 // Expected Output: profit
 app.get('/status', (req, res) => {
-  let return = parseFloat(req.query.returnPercentage);
+  let returnPercentage = parseFloat(req.query.returnPercentage);
 
 
-  res.send(calculateReturnType(return).toString());
+  res.send(calculateReturnType(returnPercentage).toString());
 });
 
-function calculateReturnType(return) {
-  if (return > 0) {
+function calculateReturnType(returnPercentage) {
+  if (returnPercentage > 0) {
     return 'profit'
   } else {
     return 'loss'
